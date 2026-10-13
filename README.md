@@ -65,7 +65,7 @@ pip install -r requirements.txt
 
 ### 4. Crie o arquivo `.env`
 
-Na pasta do projeto, crie um arquivo chamado exatamente `.env` (com o ponto, sem `.txt`) com este conteúdo, trocando pelos seus valores:
+O arquivo `.env.exemplo` é só um **modelo** (não tem credenciais reais). Copie-o para `.env` (`cp .env.exemplo .env`; no Windows, `copy .env.exemplo .env`) ou crie um arquivo chamado exatamente `.env` (com o ponto, sem `.txt`) com este conteúdo, trocando pelos seus valores:
 
 ```
 DATABASE_URL=postgresql://postgres.xxxx:SUA_SENHA@aws-...pooler.supabase.com:5432/postgres

@@ -28,7 +28,7 @@
 aplicar_sql.py
 04_sql_agent.py
 sql/00_bronze.sql · sql/01_prata.sql · sql/02_ouro.sql
-requirements.txt · .env (nunca versionar)
+requirements.txt · .env (nunca versionar) · .env.exemplo (só modelo, sem credenciais)
 ```
 
 ## 4. Convenções
