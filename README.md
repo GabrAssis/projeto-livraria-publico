@@ -13,7 +13,14 @@ books.toscrape.com → bronze.livros → prata.livros → ouro.livros / ouro.cat
 ## Como rodar
 
 1. `pip install -r requirements.txt`
-2. Copie `.env.exemplo` para `.env` e preencha com as **suas** credenciais (Postgres/Supabase e chave do provedor de LLM). O `.env` nunca é versionado.
+2. Crie um arquivo `.env` na raiz com as **suas** credenciais (ele nunca é versionado):
+
+   ```
+   DATABASE_URL=postgresql://usuario:senha@host:5432/postgres   # senha com caracteres especiais: URL-encode
+   LLM_PROVIDER=anthropic        # ou openai
+   LLM_MODEL=<modelo>
+   ANTHROPIC_API_KEY=<sua chave> # ou OPENAI_API_KEY
+   ```
 3. `python aplicar_sql.py sql/00_bronze.sql` → `python 01_scraper_bronze.py --paginas 50` → `python aplicar_sql.py sql/01_prata.sql` → `python aplicar_sql.py sql/02_ouro.sql`
 4. `python 04_sql_agent.py "Quantos livros únicos temos na base?"` ou `streamlit run app_streamlit.py`
 
